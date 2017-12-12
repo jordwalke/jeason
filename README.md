@@ -9,8 +9,12 @@ Because if this relaxation of constraints, everyone can contribute their favorit
 ## How to Use It
 
 ```sh
-npm install -g https://github.com/chenglou/jeason.git
-jeason myFileName.js
+git clone git@github.com:jordwalke/jeason.git
+cd jeason
+esy install
+esy build
+
+esy ./_build/main.native /path/to/some/jsfile.js | refmt --parse binary --print re
 ```
 
 This will read `myFileName.js` and spit out the converted Reason code in the terminal =).
