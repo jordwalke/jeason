@@ -1,0 +1,25 @@
+{
+  "name": "jeason",
+  "version": "0.35.0",
+  "license": "BSD-3-Clause",
+  "description": "The crappy js-to-reason converter anyone can contribute to!",
+  "main": "main.re",
+  "dependencies": {
+    "@opam/reason": "^3.0.0",
+    "refmterr": "3.0.6",
+    "@opam/flow_parser": "0.36.0",
+    "@opam/ocaml-migrate-parsetree": "1.0.7",
+    "@opam/sedlex": "*"
+  },
+  "esy": {
+    "build": "refmterr rebuild -no-links -package sedlex -package flow_parser -package ocaml-migrate-parsetree ./main.native",
+    "buildsInSource": "_build"
+  },
+  "peerDependencies": {
+    "ocaml": " >= 4.2.0  < 4.7.0"
+  },
+  "devDependencies": {
+    "ocaml": "~4.2.3",
+    "@opam/merlin": "*"
+  }
+}
